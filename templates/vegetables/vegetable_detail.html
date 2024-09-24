@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ vegetable.name }}</title>
+</head>
+<body>
+    <h1>{{ vegetable.name }}</h1>
+    <img src="{{ vegetable.image.url }}" alt="{{ vegetable.name }}" width="300" height="300">
+    <p>{{ vegetable.description }}</p>
+    <p>Price: {{ vegetable.price }}</p>
+    <p>Weight: {{ vegetable.weight }}</p>
+    <p>Offer: {{ vegetable.offer }}</p>
+    <a href="{% url 'vegetable_list' vegetable.category.id %}">Back to Vegetable List</a>
+</body>
+</html>
